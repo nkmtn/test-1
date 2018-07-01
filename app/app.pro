@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.c \
-    myfunc.c
+    utils.c
 
 HEADERS += \
-    myfunc.h
+    utils.h
 
 QMAKE_CFLAGS += -Wall -Wextra -Werror
 

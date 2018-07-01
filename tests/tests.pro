@@ -15,11 +15,15 @@ QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
 
-HEADERS +=     tst_test1.h \
-    ../app/myfunc.h \
-    fibonachi_test.h
+HEADERS +=     \
+    ../app/utils.h \
+    calculates_primes_test.h \
+    expand_test.h
 
 SOURCES +=     main.cpp \
-    ../app/myfunc.c
+    ../app/utils.c
 
 INCLUDEPATH += ../app
+
+SUBDIRS += \
+    ../app/app.pro
