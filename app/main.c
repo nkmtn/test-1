@@ -5,13 +5,17 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "utils.h"
-#define UNUSED(x) (void)(x)
 
 int main()
 {
     int n, m;
-    UNUSED(scanf("%d %d", &n, &m));
+    if (scanf("%d %d", &n, &m) < 2) {
+        fprintf(stderr, "Incorrect range values\n");
+        exit(EXIT_FAILURE);
+    }
+
     int i;
     int nprimes[1001];
 
@@ -20,7 +24,7 @@ int main()
     for(i = n; i <= m; i = i + 2) {
     int y1, x1, k;
     k = expand(i, &x1, &y1, nprimes);
-    UNUSED(printf("%d %d %d %d\n", i, k, x1, y1));
+    printf("%d %d %d %d\n", i, k, x1, y1);
     }
     return 0;
 }
